@@ -36,44 +36,9 @@
                 <h5 class="text-center text-dark">忘記密碼</h5>
                 <form action="">
                   <div class="form-group">
-                    <label for="tel" class="font-14">區碼</label>
-                    <select id="tel" name="tel" class="form-control form-control-plaintext">
-                      <option value="0">TW台灣(+0886)</option>
-                      <option value="1">AW阿富汗(+0093)</option>
-                    </select>
-                  </div>
-                  <div class="form-group">
-                    <label for="input-phone" class="font-14">手機號碼</label>
-                    <input id="input-phone" type="tel" pattern="/d+(/./d*)?" autofocus placeholder="請輸入手機號碼" class="form-control-plaintext border-bottom">
-                  </div>
-                  <div class="form-row align-items-end">
-                    <div class="col-sm-8">
-                      <div class="form-group">
-                        <label for="codeNumber" class="font-14">驗證碼</label>
-                        <input id="codeNumber" type="text" placeholder="手機驗證碼" required class="form-control-plaintext border-bottom">
-                      </div>
-                    </div>
-                    <div class="col-sm-4">
-                      <div class="form-group">
-                        <!--btn-outline-primary線框藍色按鈕：發送簡訊認證碼,發送後改為btn-outline-secondary灰色按鈕並且不可按（disabled）-->
-                        <button type="button" class="btn btn-block btn-outline-primary">發送簡訊認證碼</button>
-                        <button type="button" disabled class="btn btn-block btn-outline-secondary">53秒重新發送</button>
-                      </div>
-                    </div>
-                    <div class="col-12"><small class="text-danger">請輸入手機號碼</small></div>
-                  </div>
-                  <div class="form-group">
-                    <label for="input-password" class="font-14">重設密碼</label>
-                    <input id="input-reset-password" type="password" placeholder="請輸入新的密碼" required class="form-control-plaintext border-bottom">
-                  </div>
-                  <div class="form-group">
-                    <label for="input-passwordConect" class="font-14">確認密碼</label>
-                    <input id="input-passwordConect" type="password" placeholder="請再次輸入密碼" required class="form-control-plaintext border-bottom">
-                  </div>
-                  <div class="form-group">
-                    <!-- 套用時請移除--><img src="images/test-robot.png" alt="" class="img-fluid w-75">
-                  </div><small class="text-danger">error(103) 帳號已重複</small>
-                  <button type="submit" class="btn btn-block mt-2 mb-3 btn-primary py-2">更新密碼</button>
+                    <label>邮箱</label>
+                    <input type="text" class="form-control">
+                  </div><a href="login.html" class="btn btn-block mt-2 mb-3 btn-primary py-2">更新密码</a>
                   <div class="d-flex justify-content-between"><a href="login.html">登入</a><a href="register.html">註冊</a></div>
                 </form>
               </div>

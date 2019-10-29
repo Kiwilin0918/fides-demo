@@ -34,20 +34,13 @@
             <div class="card p-0 border-0 card-boxshadow">
               <div class="row">
                 <div class="col-lg-12">
-                  <div class="d-flex align-items-center h-100 bg-dark py-4"><img src="images/logo.png" alt="" class="img-fluid d-block mx-auto"></div>
+                  <div class="d-flex align-items-center h-100 bg-primary py-4"><img src="https://fakeimg.pl/250x100/" alt="" class="img-fluid d-block mx-auto"></div>
                 </div>
                 <div class="col-lg-12">
                   <form class="form-login p-4 px-md-4 py-md-5">
                     <h5 class="text-dark mb-4">會員註冊</h5>
                     <div class="form-group">
-                      <label for="tel" class="font-14">區碼</label>
-                      <select id="tel" name="tel" class="form-control form-control-plaintext">
-                        <option value="0">TW台灣(+0886)</option>
-                        <option value="1">AW阿富汗(+0093)</option>
-                      </select>
-                    </div>
-                    <div class="form-group">
-                      <label for="input-phone" class="font-14">手機號碼</label>
+                      <label for="input-phone" class="font-14">邮箱</label>
                       <input id="input-phone" type="tel" pattern="/d+(/./d*)?" autofocus placeholder="請輸入手機號碼" required class="form-control-plaintext border-bottom">
                     </div>
                     <div class="form-group">
@@ -58,33 +51,6 @@
                       <label for="input-passwordConect" class="font-14">確認密碼</label>
                       <input id="input-passwordConect" type="password" placeholder="請再次輸入密碼" required class="form-control-plaintext border-bottom">
                     </div>
-                    <div class="form-group">
-                      <label for="input-mail" class="font-14">信箱</label>
-                      <input id="input-phone" type="email" placeholder="請輸入信箱" required class="form-control-plaintext border-bottom">
-                    </div>
-                    <div class="form-row align-items-end">
-                      <div class="col-sm-8">
-                        <div class="form-group">
-                          <label for="codeNumber" class="font-14">驗證碼</label>
-                          <input id="codeNumber" type="text" placeholder="手機驗證碼" required class="form-control-plaintext border-bottom">
-                        </div>
-                      </div>
-                      <div class="col-sm-4">
-                        <div class="form-group">
-                          <!--btn-outline-primary線框藍色按鈕：發送簡訊認證碼,發送後改為btn-outline-secondary灰色按鈕並且不可按（disabled）-->
-                          <button type="button" class="btn btn-block btn-outline-primary">發送簡訊認證碼</button>
-                          <button type="button" disabled class="btn btn-block btn-outline-secondary">53秒重新發送</button>
-                        </div>
-                      </div>
-                      <div class="col-12"><small class="text-danger">請輸入手機號碼</small></div>
-                    </div>
-                    <div class="form-group">
-                      <label for="input-invitation" class="font-14">邀請碼(選填)</label>
-                      <input id="input-invitation" type="text" placeholder="" class="form-control-plaintext border-bottom">
-                    </div>
-                    <div class="form-group">
-                      <!-- 套用時請移除--><img src="images/test-robot.png" alt="" class="img-fluid w-75">
-                    </div><small class="text-danger">error(103) 帳號已重複</small>
                     <button type="submit" class="btn btn-block mt-2 mb-3 btn-primary py-2">註冊會員</button>
                     <div class="d-flex justify-content-center"><a href="login.html">登入會員</a></div>
                   </form>
