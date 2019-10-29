@@ -1,0 +1,188 @@
+
+<div class="card bg-trade mb-2">
+  <div class="card-header d-flex align-items-center flex-wrap bg-trade">
+    <div class="dropdown"><a href="#" role="button" id="dropdownTradeCoin" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown">BTC/TWD<i class="fas fa-caret-down ml-2"></i></a>
+      <!-- 下拉視窗-->
+      <div aria-labelledby="dropdownTradeCoin" class="dropdown-menu bg-trade dropdown-lg">
+        <form action="" class="px-2">
+          <div class="row mx-0 justify-content-md-between align-items-center">
+            <div class="col-md-6">
+              <div class="search-group">
+                <input type="text" value="value" placeholder="搜尋幣種" class="form-control form-control-sm"/><i class="fas fa-search"></i>
+              </div>
+            </div>
+            <div class="col-md-6 mt-3 mt-md-0">
+              <!-- 分頁導覽-->
+              <ul id="pills-tradeCoin" role="tablist" class="nav nav-pills trade-pills justify-content-center justify-content-md-end">
+                <li class="nav-item"><a id="pills-tradeCoin-TWD-tab" data-toggle="pill" href="#pills-tradeCoin-TWD" aria-selected="true" class="nav-link py-0 px-2 active">TWD</a></li>
+                <li class="nav-item"><a id="pills-tradeCoin-BTC-tab" data-toggle="pill" href="#pills-tradeCoin-BTC" role="tab" aria-controls="pills-tradeCoin-depth" aria-selected="true" class="nav-link py-0 px-2">BTC</a></li>
+                <li class="nav-item"><a id="pills-tradeCoin-USDT-tab" data-toggle="pill" href="#pills-tradeCoin-USDT" role="tab" aria-controls="pills-tradeCoin-depth" aria-selected="true" class="nav-link py-0 px-2">USDT</a></li>
+                <li class="nav-item"><a id="pills-tradeCoin-Star-tab" data-toggle="pill" href="#pills-tradeCoin-Star" role="tab" aria-controls="pills-tradeCoin-depth" aria-selected="true" class="nav-link py-0 px-2"><i class="fas fa-star"></i></a></li>
+              </ul>
+            </div>
+          </div>
+          <hr class="my-2 border-warning"/>
+          <!-- TWD分頁-->
+          <div class="tab-content">
+            <div id="pills-tradeCoin-TWD" role="tabpanel" aria-labelledby="pills-tradeCoin-TWD-tab" class="tab-pane fade show active">
+              <div class="table-responsive table-trade">
+                <table class="table table-sm table-hover mb-0">
+                  <thead>
+                    <tr class="font-14">
+                      <td class="text-nowrap">幣種</td>
+                      <td class="text-nowrap text-right">最新價</td>
+                      <td class="text-nowrap text-right">24小時漲跌</td>
+                      <td class="text-nowrap text-right">24小時成交量</td>
+                      <td class="text-nowrap text-right">收藏</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="font-14">
+                      <td class="text-nowrap">BTC / TWD</td>
+                      <td class="text-nowrap text-right">305,885.2</td>
+                      <!--text-success =綠色字(上漲); .text-danger =紅色字(下跌)，下方文字顏色皆可套用此css-->
+                      <td class="text-nowrap text-right text-danger">-3.39%</td>
+                      <td class="text-nowrap text-right">60.2198</td>
+                      <td class="star text-right">
+                        <!--fas=實心星星（已收藏）;far=線框星星(未收藏)--><i class="fa-star far"></i>
+                      </td>
+                    </tr>
+                    <tr class="font-14">
+                      <td class="text-nowrap">ETH / TWD</td>
+                      <td class="text-nowrap text-right">6,335.6</td>
+                      <!--text-success =綠色字(上漲); .text-danger =紅色字(下跌)，下方文字顏色皆可套用此css-->
+                      <td class="text-nowrap text-right text-success">+0.00%</td>
+                      <td class="text-nowrap text-right">3</td>
+                      <td class="text-right">
+                        <!--fas=實心星星（已收藏）;far=線框星星(未收藏)-->
+                        <!-- 點擊會變成實心星星，並且會在收藏分頁出現以收藏的表格資訊--><i class="fa-star far"></i>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- BTC分頁-->
+            <div id="pills-tradeCoin-BTC" role="tabpanel" aria-labelledby="pills-tradeCoin-BTC-tab" class="tab-pane fade">
+              <div class="table-responsive">
+                <table class="table table-sm table-hover">
+                  <thead>
+                    <tr class="font-14">
+                      <td class="text-nowrap">幣種</td>
+                      <td class="text-nowrap text-right">最新價</td>
+                      <td class="text-nowrap text-right">24小時漲跌</td>
+                      <td class="text-nowrap text-right">24小時成交量</td>
+                      <td class="text-nowrap text-right">收藏</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="font-14">
+                      <td class="text-nowrap">ETH / BTC</td>
+                      <td class="text-nowrap text-right">0.0211135</td>
+                      <!--text-success =綠色字(上漲); .text-danger =紅色字(下跌)，下方文字顏色皆可套用此css-->
+                      <td class="text-nowrap text-right text-danger">-0.50%</td>
+                      <td class="text-nowrap text-right">20.5555</td>
+                      <td class="star text-right">
+                        <!--fas=實心星星（已收藏）;far=線框星星(未收藏)--><i class="fa-star far"></i>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- USDT分頁-->
+            <div id="pills-tradeCoin-USDT" role="tabpanel" aria-labelledby="pills-tradeCoin-USDT-tab" class="tab-pane fade">
+              <div class="table-responsive">
+                <table class="table table-sm table-hover">
+                  <thead>
+                    <tr class="font-14">
+                      <td class="text-nowrap">幣種</td>
+                      <td class="text-nowrap text-right">最新價</td>
+                      <td class="text-nowrap text-right">24小時漲跌</td>
+                      <td class="text-nowrap text-right">24小時成交量</td>
+                      <td class="text-nowrap text-right">收藏</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="font-14">
+                      <td class="text-nowrap">BTC / USDT</td>
+                      <td class="text-nowrap text-right">9,71666</td>
+                      <!--text-success =綠色字(上漲); .text-danger =紅色字(下跌)，下方文字顏色皆可套用此css-->
+                      <td class="text-nowrap text-right text-success">+2.51%</td>
+                      <td class="text-nowrap text-right">20.5555</td>
+                      <td class="star text-right">
+                        <!--fas=實心星星（已收藏）;far=線框星星(未收藏)--><i class="fa-star fas"></i>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- USDT分頁-->
+            <div id="pills-tradeCoin-USDT" role="tabpanel" aria-labelledby="pills-tradeCoin-USDT-tab" class="tab-pane fade">
+              <div class="table-responsive">
+                <table class="table table-sm table-hover">
+                  <thead>
+                    <tr class="font-14">
+                      <td class="text-nowrap">幣種</td>
+                      <td class="text-nowrap text-right">最新價</td>
+                      <td class="text-nowrap text-right">24小時漲跌</td>
+                      <td class="text-nowrap text-right">24小時成交量</td>
+                      <td class="text-nowrap text-right">收藏</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="font-14">
+                      <td class="text-nowrap">BTC / USDT</td>
+                      <td class="text-nowrap text-right">9,71666</td>
+                      <!--text-success =綠色字(上漲); .text-danger =紅色字(下跌)，下方文字顏色皆可套用此css-->
+                      <td class="text-nowrap text-right text-success">+2.51%</td>
+                      <td class="text-nowrap text-right">20.5555</td>
+                      <td class="star text-right">
+                        <!--fas=實心星星（已收藏）;far=線框星星(未收藏)--><i class="fa-star fas"></i>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- 收藏分頁-->
+            <div id="pills-tradeCoin-Star" role="tabpanel" aria-labelledby="pills-tradeCoin-Star-tab" class="tab-pane fade">
+              <div class="table-responsive">
+                <table class="table table-sm table-hover">
+                  <thead>
+                    <tr class="font-14">
+                      <td class="text-nowrap">幣種</td>
+                      <td class="text-nowrap text-right">最新價</td>
+                      <td class="text-nowrap text-right">24小時漲跌</td>
+                      <td class="text-nowrap text-right">24小時成交量</td>
+                      <td class="text-nowrap text-right">收藏</td>
+                    </tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!--text-success =綠色字(上漲); .text-danger =紅色字(下跌)-->
+    <div class="trade-number mx-3 text-success"><span>303,303.0</span><i class="icon-arrow"></i></div>
+    <div class="mr-3 font-14"><span>漲幅</span><span class="ml-1 text-danger">-6.63%</span></div>
+    <div class="mr-3 font-14"><span>高</span><span class="ml-1">328,200.0</span></div>
+    <div class="mr-3 font-14"><span>低</span><span class="ml-1">300,576.5</span></div>
+    <div class="font-14"><span>24H量</span><span class="ml-1">61.2334</span><span>BTC</span></div>
+    <!-- 分頁導覽-->
+    <ul id="pills-tradeChart" role="tablist" class="nav nav-pills trade-pills ml-sm-auto">
+      <li class="nav-item"><a id="pills-tradeChart-Kline-tab" data-toggle="pill" href="#pills-tradeChart-Kline" role="tab" aria-controls="pills-tradeChart-Kline" aria-selected="true" class="nav-link py-0 px-2 active">K線圖</a></li>
+      <li class="nav-item"><a id="pills-tradeChart-depth-tab" data-toggle="pill" href="#pills-tradeChart-depth" role="tab" aria-controls="pills-tradeChart-depth" aria-selected="true" class="nav-link py-0 px-2">深度圖</a></li>
+    </ul>
+  </div>
+  <div class="card-body tab-content">
+    <!-- K線圖趨勢圖區塊-->
+    <div id="pills-tradeChart-Kline" role="tabpanel" aria-labelledby="pills-tradeChart-Kline-tab" class="tab-pane fade show active"><img src="https://fakeimg.pl/1108x490/" alt="" class="img-fluid"/></div>
+    <!-- 深度圖趨勢圖區塊-->
+    <div id="pills-tradeChart-depth" role="tabpanel" aria-labelledby="pills-tradeChart-depth-tab" class="tab-pane fade"><img src="https://fakeimg.pl/1100x500/" alt="" class="img-fluid"/></div>
+  </div>
+</div>

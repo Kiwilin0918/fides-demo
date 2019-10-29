@@ -1,0 +1,246 @@
+
+<div class="card bg-trade">
+  <div class="card-header p-1 py-2 bg-trade">
+    <!-- 分頁導覽-->
+    <ul id="pills-trade-limit-link" role="tablist" class="nav nav-pills trade-pills ml-sm-auto">
+      <li class="nav-item"><a id="pills-trade-limit-tab" data-toggle="pill" href="#pills-trade-limit" role="tab" aria-controls="pills-trade-limit" aria-selected="true" class="nav-link py-0 px-2 active">限價委託</a></li>
+      <li class="nav-item"><a id="pills-trade-limit-market-tab" data-toggle="pill" href="#pills-trade-limit-market" role="tab" aria-controls="pills-trade-limit-market" aria-selected="true" class="nav-link py-0 px-2">市價委託</a></li>
+    </ul>
+  </div>
+  <div class="card-body card-order-h px-2 py-1 tab-content">
+    <!-- 限價委託-->
+    <div id="pills-trade-limit" role="tabpanel" aria-labelledby="pills-trade-limit-tab" class="tab-pane fade show active">
+      <div class="form-row mx-0">
+        <!-- 買入區塊-->
+        <div class="col-md-6 col-lg-12 col-xl-6 mb-1 border-right">
+          <ul class="list-inline font-14 d-flex justify-content-between mb-2">
+            <li class="list-inline-item"><span class="mr-1">買入</span><span>BTC</span></li>
+            <li class="list-inline-item"><span class="text-secondary mr-1">餘額</span><span class="text-secondary mr-3">0.0</span><span class="text-secondary">TWD</span></li>
+            <li class="list-inline-item">
+              <!-- 入金彈窗-->
+              <div data-toggle="modal" data-target="#modal-plusMoney" class="link-point"><i class="fas fa-plus-square mr-1"></i>入金</div>
+            </li>
+          </ul>
+          <form>
+            <!-- 價格-->
+            <div class="input-group input-group-sm mb-2">
+              <div class="input-group-prepend"><span class="input-group-text">價格</span></div>
+              <input type="text" placeholder="12345" class="form-control"/>
+              <div class="input-group-append"><span class="input-group-text">TWD</span></div>
+            </div>
+            <!-- 數量-->
+            <div class="input-group input-group-sm mb-2">
+              <div class="input-group-prepend"><span class="input-group-text">數量</span></div>
+              <input type="text" placeholder="12345" class="form-control"/>
+              <div class="input-group-append"><span class="input-group-text">BTC</span></div>
+            </div>
+            <!-- 數量百分比-->
+            <div class="d-flex justify-content-between">
+              <div class="form-check pl-0">
+                <input type="radio" value="option1" checked="checked" class="form-check-input ml-0"/>
+                <label class="form-check-label pt-3 font-14">0%</label>
+              </div>
+              <div class="form-check">
+                <input type="radio" value="option2" class="form-check-input ml-0"/>
+                <label class="form-check-label pt-3 font-14">25%</label>
+              </div>
+              <div class="form-check">
+                <input type="radio" value="option2" class="form-check-input ml-0"/>
+                <label class="form-check-label pt-3 font-14">50%</label>
+              </div>
+              <div class="form-check">
+                <input type="radio" value="option2" class="form-check-input ml-0"/>
+                <label class="form-check-label pt-3 font-14">75%</label>
+              </div>
+              <div class="form-check">
+                <input type="radio" value="option2" class="form-check-input ml-0"/>
+                <label class="form-check-label pt-3 font-14">100%</label>
+              </div>
+            </div>
+            <!-- 總金額-->
+            <div class="input-group input-group-sm mb-2">
+              <div class="input-group-prepend"><span class="input-group-text disabled">總金額</span></div>
+              <input type="text" placeholder="12345" disabled="disabled" class="form-control"/>
+              <div class="input-group-append"><span class="input-group-text disabled">TWD</span></div>
+            </div>
+            <!-- 未登入時顯示登入或註冊區塊-->
+            <div class="border text-center py-2 mb-2 font-14"><a href="login.html" class="text-primary mr-1">登入</a>或<a href="register.html" class="text-primary mx-1">註冊</a>開始交易</div>
+            <!-- 登入後出現的按鈕-->
+            <button type="button" data-toggle="modal" data-target="#modal-plusMoney" class="btn btn-block btn-success">買入</button>
+          </form>
+        </div>
+        <!-- 賣出區塊-->
+        <div class="col-md-6 col-lg-12 col-xl-6 mb-1">
+          <ul class="list-inline font-14 d-flex justify-content-between mb-2">
+            <li class="list-inline-item"><span class="mr-1">賣出</span><span>BTC</span></li>
+            <li class="list-inline-item"><span class="text-secondary mr-1">餘額</span><span class="text-secondary mr-3">0.0</span><span class="text-secondary">TWD</span></li>
+            <li class="list-inline-item">
+              <!-- 入金彈窗-->
+              <div data-toggle="modal" data-target="#modal-plusMoney" class="link-point"><i class="fas fa-plus-square mr-1"></i>入金</div>
+            </li>
+          </ul>
+          <form>
+            <!-- 價格-->
+            <div class="input-group input-group-sm mb-2">
+              <div class="input-group-prepend"><span class="input-group-text">價格</span></div>
+              <input type="text" placeholder="12345" class="form-control"/>
+              <div class="input-group-append"><span class="input-group-text">TWD</span></div>
+            </div>
+            <!-- 數量-->
+            <div class="input-group input-group-sm mb-2">
+              <div class="input-group-prepend"><span class="input-group-text">數量</span></div>
+              <input type="text" placeholder="12345" class="form-control"/>
+              <div class="input-group-append"><span class="input-group-text">BTC</span></div>
+            </div>
+            <!-- 數量百分比-->
+            <div class="d-flex justify-content-between">
+              <div class="form-check pl-0">
+                <input type="radio" value="option1" checked="checked" class="form-check-input ml-0"/>
+                <label class="form-check-label pt-3 font-14">0%</label>
+              </div>
+              <div class="form-check">
+                <input type="radio" value="option2" class="form-check-input ml-0"/>
+                <label class="form-check-label pt-3 font-14">25%</label>
+              </div>
+              <div class="form-check">
+                <input type="radio" value="option2" class="form-check-input ml-0"/>
+                <label class="form-check-label pt-3 font-14">50%</label>
+              </div>
+              <div class="form-check">
+                <input type="radio" value="option2" class="form-check-input ml-0"/>
+                <label class="form-check-label pt-3 font-14">75%</label>
+              </div>
+              <div class="form-check">
+                <input type="radio" value="option2" class="form-check-input ml-0"/>
+                <label class="form-check-label pt-3 font-14">100%</label>
+              </div>
+            </div>
+            <!-- 總金額-->
+            <div class="input-group input-group-sm mb-2">
+              <div class="input-group-prepend"><span class="input-group-text disabled">總金額</span></div>
+              <input type="text" placeholder="12345" disabled="disabled" class="form-control"/>
+              <div class="input-group-append"><span class="input-group-text disabled">TWD</span></div>
+            </div>
+            <!-- 未登入時顯示登入或註冊區塊-->
+            <div class="border text-center py-2 mb-2 font-14"><a href="login.html" class="text-primary mr-1">登入</a>或<a href="register.html" class="text-primary mx-1">註冊</a>開始交易</div>
+            <!-- 登入後出現的按鈕-->
+            <button type="button" data-toggle="modal" data-target="#modal-plusMoney" class="btn btn-block btn-danger">賣出</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- 市價委託-->
+    <div id="pills-trade-limit-market" role="tabpanel" aria-labelledby="pills-trade-limit-market-tab" class="tab-pane fade">
+      <div class="form-row mx-0">
+        <!-- 買入區塊-->
+        <div class="col-md-6 col-lg-12 col-xl-6 mb-1 border-right">
+          <ul class="list-inline font-14 d-flex justify-content-between mb-2">
+            <li class="list-inline-item"><span class="mr-1">買入</span><span>BTC</span></li>
+            <li class="list-inline-item"><span class="text-secondary mr-1">餘額</span><span class="text-secondary mr-3">0.0</span><span class="text-secondary">TWD</span></li>
+            <li class="list-inline-item">
+              <!-- 入金彈窗-->
+              <div data-toggle="modal" data-target="#modal-plusMoney" class="link-point"><i class="fas fa-plus-square mr-1"></i>入金</div>
+            </li>
+          </ul>
+          <form>
+            <!-- 價格-->
+            <div class="input-group input-group-sm mb-2">
+              <div class="input-group-prepend"><span class="input-group-text disabled">價格</span></div>
+              <input type="text" placeholder="市場價格" disabled="disabled" class="form-control"/>
+              <div class="input-group-append"><span class="input-group-text disabled">TWD</span></div>
+            </div>
+            <!-- 數量-->
+            <div class="input-group input-group-sm mb-2">
+              <div class="input-group-prepend"><span class="input-group-text">數量</span></div>
+              <input type="text" placeholder="12345" class="form-control"/>
+              <div class="input-group-append"><span class="input-group-text">BTC</span></div>
+            </div>
+            <!-- 數量百分比-->
+            <div class="d-flex justify-content-between">
+              <div class="form-check pl-0">
+                <input type="radio" value="option1" checked="checked" class="form-check-input ml-0"/>
+                <label class="form-check-label pt-3 font-14">0%</label>
+              </div>
+              <div class="form-check">
+                <input type="radio" value="option2" class="form-check-input ml-0"/>
+                <label class="form-check-label pt-3 font-14">25%</label>
+              </div>
+              <div class="form-check">
+                <input type="radio" value="option2" class="form-check-input ml-0"/>
+                <label class="form-check-label pt-3 font-14">50%</label>
+              </div>
+              <div class="form-check">
+                <input type="radio" value="option2" class="form-check-input ml-0"/>
+                <label class="form-check-label pt-3 font-14">75%</label>
+              </div>
+              <div class="form-check">
+                <input type="radio" value="option2" class="form-check-input ml-0"/>
+                <label class="form-check-label pt-3 font-14">100%</label>
+              </div>
+            </div>
+            <!-- 總金額-->
+            <div class="bg-gray w-100 text-center py-1 mb-2 font-14 rounded"><span>總金額 ≈ 0.0TWD(參考價)</span></div>
+            <!-- 未登入時顯示登入或註冊區塊-->
+            <div class="border text-center py-2 mb-2 font-14"><a href="login.html" class="text-primary mr-1">登入</a>或<a href="register.html" class="text-primary mx-1">註冊</a>開始交易</div>
+            <!-- 登入後出現的按鈕-->
+            <button type="button" data-toggle="modal" data-target="#modal-plusMoney" class="btn btn-block btn-success">買入</button>
+          </form>
+        </div>
+        <!-- 賣出區塊-->
+        <div class="col-md-6 col-lg-12 col-xl-6 mb-1">
+          <ul class="list-inline font-14 d-flex justify-content-between mb-2">
+            <li class="list-inline-item"><span class="mr-1">賣出</span><span>BTC</span></li>
+            <li class="list-inline-item"><span class="text-secondary mr-1">餘額</span><span class="text-secondary mr-3">0.0</span><span class="text-secondary">TWD</span></li>
+            <li class="list-inline-item">
+              <!-- 入金彈窗-->
+              <div data-toggle="modal" data-target="#modal-plusMoney" class="link-point"><i class="fas fa-plus-square mr-1"></i>入金</div>
+            </li>
+          </ul>
+          <form>
+            <!-- 價格-->
+            <div class="input-group input-group-sm mb-2">
+              <div class="input-group-prepend"><span class="input-group-text disabled">價格</span></div>
+              <input type="text" placeholder="市場價格" disabled="disabled" class="form-control"/>
+              <div class="input-group-append"><span class="input-group-text disabled">TWD</span></div>
+            </div>
+            <!-- 數量-->
+            <div class="input-group input-group-sm mb-2">
+              <div class="input-group-prepend"><span class="input-group-text">數量</span></div>
+              <input type="text" placeholder="12345" class="form-control"/>
+              <div class="input-group-append"><span class="input-group-text">BTC</span></div>
+            </div>
+            <!-- 數量百分比-->
+            <div class="d-flex justify-content-between">
+              <div class="form-check pl-0">
+                <input type="radio" value="option1" checked="checked" class="form-check-input ml-0"/>
+                <label class="form-check-label pt-3 font-14">0%</label>
+              </div>
+              <div class="form-check">
+                <input type="radio" value="option2" class="form-check-input ml-0"/>
+                <label class="form-check-label pt-3 font-14">25%</label>
+              </div>
+              <div class="form-check">
+                <input type="radio" value="option2" class="form-check-input ml-0"/>
+                <label class="form-check-label pt-3 font-14">50%</label>
+              </div>
+              <div class="form-check">
+                <input type="radio" value="option2" class="form-check-input ml-0"/>
+                <label class="form-check-label pt-3 font-14">75%</label>
+              </div>
+              <div class="form-check">
+                <input type="radio" value="option2" class="form-check-input ml-0"/>
+                <label class="form-check-label pt-3 font-14">100%</label>
+              </div>
+            </div>
+            <!-- 總金額-->
+            <div class="bg-gray w-100 text-center py-1 mb-2 font-14 rounded"><span>總金額 ≈ 0.0TWD(參考價)</span></div>
+            <!-- 未登入時顯示登入或註冊區塊-->
+            <div class="border text-center py-2 mb-2 font-14"><a href="login.html" class="text-primary mr-1">登入</a>或<a href="register.html" class="text-primary mx-1">註冊</a>開始交易</div>
+            <!-- 登入後出現的按鈕-->
+            <button type="button" data-toggle="modal" data-target="#modal-plusMoney" class="btn btn-block btn-danger">賣出</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

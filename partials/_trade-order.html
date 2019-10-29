@@ -1,0 +1,85 @@
+
+<div class="card bg-trade">
+  <div class="card-header p-1 py-2 bg-trade">
+    <!-- 分頁導覽-->
+    <ul id="pills-tradeOrder" role="tablist" class="nav nav-pills trade-pills ml-sm-auto">
+      <li class="nav-item"><a id="pills-tradeOrder-order-tab" data-toggle="pill" href="#pills-tradeOrder-order" role="tab" aria-controls="pills-tradeOrder-order" aria-selected="true" class="nav-link py-0 px-2 active">委託中訂單</a></li>
+      <li class="nav-item"><a id="pills-tradeOrder-fin-tab" data-toggle="pill" href="#pills-tradeOrder-fin" role="tab" aria-controls="pills-tradeOrder-fin" aria-selected="true" class="nav-link py-0 px-2">已完成訂單</a></li>
+    </ul>
+  </div>
+  <div class="card-body card-order-h p-1 tab-content">
+    <!-- 委託中訂單-->
+    <div id="pills-tradeOrder-order" role="tabpanel" aria-labelledby="pills-tradeOrder-order-tab" class="tab-pane fade show active">
+      <div class="table-responsive table-trade table-order">
+        <table class="table table-sm table-hover table-dark bg-trade mb-0">
+          <thead>
+            <tr class="font-14">
+              <td class="border-0 text-nowrap">時間</td>
+              <td class="border-0 text-nowrap text-center">幣種/市場</td>
+              <td class="border-0 text-center">買賣</td>
+              <td class="border-0 text-nowrap text-right">成交量/委託量</td>
+              <td class="border-0 text-nowrap text-right">委託價</td>
+              <td class="border-0 text-nowrap text-right">成交率</td>
+              <td class="border-0 text-nowrap text-right">成交金額</td>
+              <!-- td.border-0.text-nowrap.text-right 操作-->
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="font-14">
+              <td class="text-nowrap align-middle">2019-10-18 12:58:40</td>
+              <td class="text-nowrap align-middle text-center">BTC/TWD</td>
+              <!--text-success =綠色字(賣); .text-danger =紅色字(買)-->
+              <td class="text-nowrap align-middle text-center text-danger">買</td>
+              <td class="text-nowrap align-middle text-right">0.0063</td>
+              <td class="text-nowrap align-middle text-right">0.0063</td>
+              <td class="text-nowrap align-middle text-right">100%</td>
+              <td class="text-nowrap align-middle text-right">0.0063</td>
+              <!-- td.text-nowrap.align-middle.text-rightbutton.btn.btn-sm.btn-outline-primary 操作
+              -->
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- 當沒有任何資料時，顯示此區塊，當有任何一筆資料時，此區塊會移除-->
+      <div class="nodata"><i class="fas fa-clipboard-list fa-3x"></i>
+        <!-- 未登入時：登入後可查看目前委託訂單 ; 沒有訂單時：目前無委託中的訂單-->
+        <p class="font-14 mt-2">登入後可查看目前委託訂單</p>
+      </div>
+    </div>
+    <!-- 已完成訂單分頁-->
+    <div id="pills-tradeOrder-fin" role="tabpanel" aria-labelledby="pills-tradeOrder-fin-tab" class="tab-pane fade">
+      <div class="table-responsive table-trade table-order">
+        <table class="table table-sm table-hover table-dark bg-trade mb-0">
+          <thead>
+            <tr class="font-14">
+              <td class="border-0 text-nowrap">時間</td>
+              <td class="border-0 text-nowrap text-center">幣種/市場</td>
+              <td class="border-0 text-center">買賣</td>
+              <td class="border-0 text-nowrap text-right">成交價格</td>
+              <td class="border-0 text-nowrap text-right">成交數量</td>
+              <td class="border-0 text-nowrap text-right">手續費</td>
+              <td class="border-0 text-nowrap text-right">成交金額</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="font-14">
+              <td class="text-nowrap align-middle">2019-10-18 12:58:40</td>
+              <td class="text-nowrap align-middle text-center">BTC/TWD</td>
+              <!--text-success =綠色字(賣); .text-danger =紅色字(買)-->
+              <td class="text-nowrap align-middle text-center text-danger">買</td>
+              <td class="text-nowrap align-middle text-right">0.0063</td>
+              <td class="text-nowrap align-middle text-right">0.0063</td>
+              <td class="text-nowrap align-middle text-right">1.52</td>
+              <td class="text-nowrap align-middle text-right">0.0063</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- 當沒有任何資料時，顯示此區塊，當有任何一筆資料時，此區塊會移除-->
+      <div class="nodata"><i class="fas fa-clipboard-list fa-3x"></i>
+        <!-- 未登入時：登入後可查看已完成訂單 ; 沒有訂單時：目前無完成訂單-->
+        <p class="font-14 mt-2">登入後可查看已完成訂單</p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+  <head>
+    <title>Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="stylesheets/all.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <!--menu-->
+    
+    <script src="javascripts/vendor.js"></script>
+    <script src="assets/js/echarts.min.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark font-14"><a href="index.html"><img src="https://fakeimg.pl/140x45/" alt="" class="img-fluid"></a>
+      <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler border-0"><span class="navbar-toggler-icon"></span></button>
+      <div id="navbarSupportedContent" class="collapse navbar-collapse">
+        <!--已登入時顯示-->
+        <ul class="navbar-nav ml-auto">
+          <li class="px-md-2"><a href="index.html" class="nav-link text-light">钱包</a></li>
+          <li class="px-md-2"><a href="login.html" class="nav-link text-light">登出</a></li>
+          <li class="px-md-2 dropdown"><a id="navbarDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle text-light">简体中文</a>
+            <div aria-labelledby="navbarDropdown" class="dropdown-menu dropdown-menu-right"><a href="#" class="dropdown-item">English</a></div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <section class="container py-5 wrapper">
+      <div class="row">
+        <div class="col-md-4 col-lg-3">
+          <!--Sidebar start-->
+          <div class="card mb-2 mb-md-3">
+            <div class="card-body"><span>UID:</span><span>12345</span></div>
+          </div>
+          <div class="card userList mb-3">
+            <div class="card-header">
+              <div class="card-title">個人訊息</div>
+            </div>
+            <ul class="nav flex-column">
+                        <li class="nav-item"><a href="user.html" class="nav-link">
+                             
+                            基本資料</a></li>
+                        <li class="nav-item"><a href="authentication.html" class="nav-link">
+                             
+                            身份認證</a></li>
+            </ul>
+            <div class="card-header border-top">
+              <div class="card-title">安全裝置</div>
+            </div>
+            <ul class="nav flex-column">
+                        <li class="nav-item"><a href="setpwd.html" class="nav-link active">
+                             
+                            密碼設置</a></li>
+                        <li class="nav-item"><a href="binding.html" class="nav-link">
+                             
+                            手機信箱綁定</a></li>
+            </ul>
+            <div class="card-header border-top">
+              <div class="card-title">活動</div>
+            </div>
+            <ul class="nav flex-column"> 
+                        <li class="nav-item"><a href="invite-home.html" class="nav-link">
+                             
+                            邀請返佣</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-8 col-lg-9 mb-3">
+          <div class="card mb-3">
+            <div class="card-header">
+              <div class="card-title">修改登入密碼</div>
+            </div>
+            <div class="card-body">
+              <form action="">
+                <div class="form-group">
+                  <label for="loginPwd" class="font-14">登入密碼</label>
+                  <input id="loginPwd" type="password" placeholder="請輸入密碼" required="required" class="form-control"/>
+                </div>
+                <div class="form-group">
+                  <label for="loginPwd-new" class="font-14">新登入密碼</label>
+                  <input id="loginPwd-new" type="password" placeholder="請輸入新密碼" required="required" class="form-control"/><small class="form-text">密碼由8-16位組成，需包含大、小寫字母和數字</small>
+                </div>
+                <div class="form-group">
+                  <label for="loginPwd-confirm" class="font-14">確認密碼</label>
+                  <input id="loginPwd-confirm" type="password" placeholder="請確認密碼" required="required" class="form-control"/>
+                </div>
+                <div class="form-group">
+                  <!-- 套用時請移除--><img src="images/test-robot.png" alt="" class="img-fluid w-75">
+                </div><small class="text-danger">error(155) 帳號或密碼輸入錯誤</small>
+                <button typ="submit" class="btn btn-primary btn-block mt-3">送出</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="bg-dark">
+      <p class="mb-0 text-center border-top py-2 text-white">Copyright © Demo</p>
+    </footer>
+    <script src="assets/js/demo.js"></script>
+  </body>
+</html>

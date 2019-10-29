@@ -1,0 +1,457 @@
+
+<div class="card bg-trade h-100">
+  <div class="card-header d-flex bg-trade px-2 align-items-center">
+    <h6 class="mb-0 font-14">掛單簿</h6>
+    <!-- 分頁導覽-->
+    <ul id="pills-tradeColor" role="tablist" class="nav nav-pills trade-pills tab-color ml-auto">
+      <li class="nav-item"><a id="pills-tradeColor-all-tab" data-toggle="pill" href="#pills-tradeColor-all" aria-selected="true" class="nav-link py-0 px-0 mr-3 nav-link-all active"></a></li>
+      <li class="nav-item"><a id="pills-tradeColor-red-tab" data-toggle="pill" href="#pills-tradeColor-red" role="tab" aria-controls="pills-tradeCoin-depth" aria-selected="true" class="nav-link py-0 px-0 mr-3 nav-link-red"> </a></li>
+      <li class="nav-item"><a id="pills-tradeColor-green-tab" data-toggle="pill" href="#pills-tradeColor-green" role="tab" aria-controls="pills-tradeCoin-depth" aria-selected="true" class="nav-link py-0 px-0 nav-link-green"></a></li>
+    </ul>
+  </div>
+  <div class="card-body p-1 tab-content">
+    <!--pills-tradeColor-all (全部顯示)-->
+    <div id="pills-tradeColor-all" role="tabpanel" aria-labelledby="pills-tradeColor-all-tab" class="tab-pane fade show active">
+      <div class="table-responsive table-trade position-relative">
+        <!-- 買入(紅色)-->
+        <div class="trade-box table-trade">
+          <div class="trade-box-hd">
+            <div class="col px-1">
+              <div class="font-14">價格</div>
+            </div>
+            <div class="col px-1">
+              <div class="font-14 text-right">數量</div>
+            </div>
+            <div class="col px-1">
+              <div class="font-14 text-right">總價</div>
+            </div>
+          </div>
+          <div class="trade-box-bd">
+            <div class="trade-buy-box">
+              <!--買入內容表單;flex-column-reverse會使資料從下往上生長-->
+              <div class="trade-buy d-flex flex-column-reverse">
+                <ul class="d-flex trade-box-list mb-0">
+                  <li class="col px-1 trade-box-listItem text-danger">First</li>
+                  <li class="col px-1 trade-box-listItem text-right">302,795.8</li>
+                  <li class="col px-1 trade-box-listItem text-right">0.00063</li>
+                </ul>
+                <ul class="d-flex trade-box-list mb-0">
+                  <li class="col px-1 trade-box-listItem text-danger">314,331.0</li>
+                  <li class="col px-1 trade-box-listItem text-right">302,795.8</li>
+                  <li class="col px-1 trade-box-listItem text-right">0.00063</li>
+                </ul>
+                <ul class="d-flex trade-box-list mb-0">
+                  <li class="col px-1 trade-box-listItem text-danger">314,331.0</li>
+                  <li class="col px-1 trade-box-listItem text-right">302,795.8</li>
+                  <li class="col px-1 trade-box-listItem text-right">0.00063</li>
+                </ul>
+                <ul class="d-flex trade-box-list mb-0">
+                  <li class="col px-1 trade-box-listItem text-danger">314,331.0</li>
+                  <li class="col px-1 trade-box-listItem text-right">302,795.8</li>
+                  <li class="col px-1 trade-box-listItem text-right">0.00063</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 中間數值區塊-->
+        <div class="trade-current-amount">
+          <!--text-success =綠色字 ;text-danger =紅色字-->
+          <div class="count trade-number text-danger"><span>557,263</span><i class="icon-arrow"></i></div>
+        </div>
+        <!--賣出(綠色)-->
+        <div class="trade-box table-trade">
+          <div class="trade-box-hd">
+            <div class="col px-1">
+              <div class="font-14">價格</div>
+            </div>
+            <div class="col px-1">
+              <div class="font-14 text-right">數量</div>
+            </div>
+            <div class="col px-1">
+              <div class="font-14 text-right">總價</div>
+            </div>
+          </div>
+          <div class="trade-box-bd">
+            <div class="trade-sell-box">
+              <div class="trade-sell d-flex flex-column">
+                <ul class="d-flex trade-box-list mb-0">
+                  <li class="col px-1 trade-box-listItem text-success">First</li>
+                  <li class="col px-1 trade-box-listItem text-right">302,795.8</li>
+                  <li class="col px-1 trade-box-listItem text-right">0.00063</li>
+                </ul>
+                <ul class="d-flex trade-box-list mb-0">
+                  <li class="col px-1 trade-box-listItem text-success">314,331.0</li>
+                  <li class="col px-1 trade-box-listItem text-right">302,795.8</li>
+                  <li class="col px-1 trade-box-listItem text-right">0.00063</li>
+                </ul>
+                <ul class="d-flex trade-box-list mb-0">
+                  <li class="col px-1 trade-box-listItem text-success">314,331.0</li>
+                  <li class="col px-1 trade-box-listItem text-right">302,795.8</li>
+                  <li class="col px-1 trade-box-listItem text-right">0.00063</li>
+                </ul>
+                <ul class="d-flex trade-box-list mb-0">
+                  <li class="col px-1 trade-box-listItem text-success">314,331.0</li>
+                  <li class="col px-1 trade-box-listItem text-right">302,795.8</li>
+                  <li class="col px-1 trade-box-listItem text-right">0.00063</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--pills-tradeColor-all (顯示紅色)-->
+    <div id="pills-tradeColor-red" role="tabpanel" aria-labelledby="pills-tradeColor-red-tab" class="tab-pane fade">
+      <div class="table-responsive table-trade position-relative">
+        <!-- 買入(紅色)-->
+        <div class="trade-box table-trade">
+          <div class="trade-box-hd">
+            <div class="col px-1">
+              <div class="font-14">價格</div>
+            </div>
+            <div class="col px-1">
+              <div class="font-14 text-right">數量</div>
+            </div>
+            <div class="col px-1">
+              <div class="font-14 text-right">總價</div>
+            </div>
+          </div>
+          <div class="trade-box-bd">
+            <div class="trade-buy-box">
+              <!-- 買入-->
+              <div class="trade-buy d-flex flex-column">
+                <ul class="d-flex trade-box-list mb-0">
+                  <li class="col px-1 trade-box-listItem text-danger">First</li>
+                  <li class="col px-1 trade-box-listItem text-right">302,795.8</li>
+                  <li class="col px-1 trade-box-listItem text-right">0.00063</li>
+                </ul>
+                <ul class="d-flex trade-box-list mb-0">
+                  <li class="col px-1 trade-box-listItem text-danger">314,331.0</li>
+                  <li class="col px-1 trade-box-listItem text-right">302,795.8</li>
+                  <li class="col px-1 trade-box-listItem text-right">0.00063</li>
+                </ul>
+                <ul class="d-flex trade-box-list mb-0">
+                  <li class="col px-1 trade-box-listItem text-danger">314,331.0</li>
+                  <li class="col px-1 trade-box-listItem text-right">302,795.8</li>
+                  <li class="col px-1 trade-box-listItem text-right">0.00063</li>
+                </ul>
+                <ul class="d-flex trade-box-list mb-0">
+                  <li class="col px-1 trade-box-listItem text-danger">314,331.0</li>
+                  <li class="col px-1 trade-box-listItem text-right">302,795.8</li>
+                  <li class="col px-1 trade-box-listItem text-right">0.00063</li>
+                </ul>
+                <ul class="d-flex trade-box-list mb-0">
+                  <li class="col px-1 trade-box-listItem text-danger">314,331.0</li>
+                  <li class="col px-1 trade-box-listItem text-right">302,795.8</li>
+                  <li class="col px-1 trade-box-listItem text-right">0.00063</li>
+                </ul>
+                <ul class="d-flex trade-box-list mb-0">
+                  <li class="col px-1 trade-box-listItem text-danger">314,331.0</li>
+                  <li class="col px-1 trade-box-listItem text-right">302,795.8</li>
+                  <li class="col px-1 trade-box-listItem text-right">0.00063</li>
+                </ul>
+                <ul class="d-flex trade-box-list mb-0">
+                  <li class="col px-1 trade-box-listItem text-danger">314,331.0</li>
+                  <li class="col px-1 trade-box-listItem text-right">302,795.8</li>
+                  <li class="col px-1 trade-box-listItem text-right">0.00063</li>
+                </ul>
+                <ul class="d-flex trade-box-list mb-0">
+                  <li class="col px-1 trade-box-listItem text-danger">314,331.0</li>
+                  <li class="col px-1 trade-box-listItem text-right">302,795.8</li>
+                  <li class="col px-1 trade-box-listItem text-right">0.00063</li>
+                </ul>
+                <ul class="d-flex trade-box-list mb-0">
+                  <li class="col px-1 trade-box-listItem text-danger">314,331.0</li>
+                  <li class="col px-1 trade-box-listItem text-right">302,795.8</li>
+                  <li class="col px-1 trade-box-listItem text-right">0.00063</li>
+                </ul>
+                <ul class="d-flex trade-box-list mb-0">
+                  <li class="col px-1 trade-box-listItem text-danger">314,331.0</li>
+                  <li class="col px-1 trade-box-listItem text-right">302,795.8</li>
+                  <li class="col px-1 trade-box-listItem text-right">0.00063</li>
+                </ul>
+                <ul class="d-flex trade-box-list mb-0">
+                  <li class="col px-1 trade-box-listItem text-danger">314,331.0</li>
+                  <li class="col px-1 trade-box-listItem text-right">302,795.8</li>
+                  <li class="col px-1 trade-box-listItem text-right">0.00063</li>
+                </ul>
+                <ul class="d-flex trade-box-list mb-0">
+                  <li class="col px-1 trade-box-listItem text-danger">314,331.0</li>
+                  <li class="col px-1 trade-box-listItem text-right">302,795.8</li>
+                  <li class="col px-1 trade-box-listItem text-right">0.00063</li>
+                </ul>
+                <ul class="d-flex trade-box-list mb-0">
+                  <li class="col px-1 trade-box-listItem text-danger">314,331.0</li>
+                  <li class="col px-1 trade-box-listItem text-right">302,795.8</li>
+                  <li class="col px-1 trade-box-listItem text-right">0.00063</li>
+                </ul>
+                <ul class="d-flex trade-box-list mb-0">
+                  <li class="col px-1 trade-box-listItem text-danger">314,331.0</li>
+                  <li class="col px-1 trade-box-listItem text-right">302,795.8</li>
+                  <li class="col px-1 trade-box-listItem text-right">0.00063</li>
+                </ul>
+                <ul class="d-flex trade-box-list mb-0">
+                  <li class="col px-1 trade-box-listItem text-danger">314,331.0</li>
+                  <li class="col px-1 trade-box-listItem text-right">302,795.8</li>
+                  <li class="col px-1 trade-box-listItem text-right">0.00063</li>
+                </ul>
+                <ul class="d-flex trade-box-list mb-0">
+                  <li class="col px-1 trade-box-listItem text-danger">314,331.0</li>
+                  <li class="col px-1 trade-box-listItem text-right">302,795.8</li>
+                  <li class="col px-1 trade-box-listItem text-right">0.00063</li>
+                </ul>
+                <ul class="d-flex trade-box-list mb-0">
+                  <li class="col px-1 trade-box-listItem text-danger">314,331.0</li>
+                  <li class="col px-1 trade-box-listItem text-right">302,795.8</li>
+                  <li class="col px-1 trade-box-listItem text-right">0.00063</li>
+                </ul>
+                <ul class="d-flex trade-box-list mb-0">
+                  <li class="col px-1 trade-box-listItem text-danger">314,331.0</li>
+                  <li class="col px-1 trade-box-listItem text-right">302,795.8</li>
+                  <li class="col px-1 trade-box-listItem text-right">0.00063</li>
+                </ul>
+                <ul class="d-flex trade-box-list mb-0">
+                  <li class="col px-1 trade-box-listItem text-danger">314,331.0</li>
+                  <li class="col px-1 trade-box-listItem text-right">302,795.8</li>
+                  <li class="col px-1 trade-box-listItem text-right">0.00063</li>
+                </ul>
+                <ul class="d-flex trade-box-list mb-0">
+                  <li class="col px-1 trade-box-listItem text-danger">314,331.0</li>
+                  <li class="col px-1 trade-box-listItem text-right">302,795.8</li>
+                  <li class="col px-1 trade-box-listItem text-right">0.00063</li>
+                </ul>
+                <ul class="d-flex trade-box-list mb-0">
+                  <li class="col px-1 trade-box-listItem text-danger">314,331.0</li>
+                  <li class="col px-1 trade-box-listItem text-right">302,795.8</li>
+                  <li class="col px-1 trade-box-listItem text-right">0.00063</li>
+                </ul>
+                <ul class="d-flex trade-box-list mb-0">
+                  <li class="col px-1 trade-box-listItem text-danger">314,331.0</li>
+                  <li class="col px-1 trade-box-listItem text-right">302,795.8</li>
+                  <li class="col px-1 trade-box-listItem text-right">0.00063</li>
+                </ul>
+                <ul class="d-flex trade-box-list mb-0">
+                  <li class="col px-1 trade-box-listItem text-danger">314,331.0</li>
+                  <li class="col px-1 trade-box-listItem text-right">302,795.8</li>
+                  <li class="col px-1 trade-box-listItem text-right">0.00063</li>
+                </ul>
+                <ul class="d-flex trade-box-list mb-0">
+                  <li class="col px-1 trade-box-listItem text-danger">314,331.0</li>
+                  <li class="col px-1 trade-box-listItem text-right">302,795.8</li>
+                  <li class="col px-1 trade-box-listItem text-right">0.00063</li>
+                </ul>
+                <ul class="d-flex trade-box-list mb-0">
+                  <li class="col px-1 trade-box-listItem text-danger">314,331.0</li>
+                  <li class="col px-1 trade-box-listItem text-right">302,795.8</li>
+                  <li class="col px-1 trade-box-listItem text-right">0.00063</li>
+                </ul>
+                <ul class="d-flex trade-box-list mb-0">
+                  <li class="col px-1 trade-box-listItem text-danger">314,331.0</li>
+                  <li class="col px-1 trade-box-listItem text-right">302,795.8</li>
+                  <li class="col px-1 trade-box-listItem text-right">0.00063</li>
+                </ul>
+                <ul class="d-flex trade-box-list mb-0">
+                  <li class="col px-1 trade-box-listItem text-danger">314,331.0</li>
+                  <li class="col px-1 trade-box-listItem text-right">302,795.8</li>
+                  <li class="col px-1 trade-box-listItem text-right">0.00063</li>
+                </ul>
+                <ul class="d-flex trade-box-list mb-0">
+                  <li class="col px-1 trade-box-listItem text-danger">314,331.0</li>
+                  <li class="col px-1 trade-box-listItem text-right">302,795.8</li>
+                  <li class="col px-1 trade-box-listItem text-right">0.00063</li>
+                </ul>
+                <ul class="d-flex trade-box-list mb-0">
+                  <li class="col px-1 trade-box-listItem text-danger">314,331.0</li>
+                  <li class="col px-1 trade-box-listItem text-right">302,795.8</li>
+                  <li class="col px-1 trade-box-listItem text-right">0.00063</li>
+                </ul>
+                <ul class="d-flex trade-box-list mb-0">
+                  <li class="col px-1 trade-box-listItem text-danger">314,331.0</li>
+                  <li class="col px-1 trade-box-listItem text-right">302,795.8</li>
+                  <li class="col px-1 trade-box-listItem text-right">0.00063</li>
+                </ul>
+                <ul class="d-flex trade-box-list mb-0">
+                  <li class="col px-1 trade-box-listItem text-danger">314,331.0</li>
+                  <li class="col px-1 trade-box-listItem text-right">302,795.8</li>
+                  <li class="col px-1 trade-box-listItem text-right">0.00063</li>
+                </ul>
+                <ul class="d-flex trade-box-list mb-0">
+                  <li class="col px-1 trade-box-listItem text-danger">314,331.0</li>
+                  <li class="col px-1 trade-box-listItem text-right">302,795.8</li>
+                  <li class="col px-1 trade-box-listItem text-right">0.00063</li>
+                </ul>
+                <ul class="d-flex trade-box-list mb-0">
+                  <li class="col px-1 trade-box-listItem text-danger">314,331.0</li>
+                  <li class="col px-1 trade-box-listItem text-right">302,795.8</li>
+                  <li class="col px-1 trade-box-listItem text-right">0.00063</li>
+                </ul>
+                <ul class="d-flex trade-box-list mb-0">
+                  <li class="col px-1 trade-box-listItem text-danger">314,331.0</li>
+                  <li class="col px-1 trade-box-listItem text-right">302,795.8</li>
+                  <li class="col px-1 trade-box-listItem text-right">0.00063</li>
+                </ul>
+                <ul class="d-flex trade-box-list mb-0">
+                  <li class="col px-1 trade-box-listItem text-danger">314,331.0</li>
+                  <li class="col px-1 trade-box-listItem text-right">302,795.8</li>
+                  <li class="col px-1 trade-box-listItem text-right">0.00063</li>
+                </ul>
+                <ul class="d-flex trade-box-list mb-0">
+                  <li class="col px-1 trade-box-listItem text-danger">314,331.0</li>
+                  <li class="col px-1 trade-box-listItem text-right">302,795.8</li>
+                  <li class="col px-1 trade-box-listItem text-right">0.00063</li>
+                </ul>
+                <ul class="d-flex trade-box-list mb-0">
+                  <li class="col px-1 trade-box-listItem text-danger">314,331.0</li>
+                  <li class="col px-1 trade-box-listItem text-right">302,795.8</li>
+                  <li class="col px-1 trade-box-listItem text-right">0.00063</li>
+                </ul>
+                <ul class="d-flex trade-box-list mb-0">
+                  <li class="col px-1 trade-box-listItem text-danger">314,331.0</li>
+                  <li class="col px-1 trade-box-listItem text-right">302,795.8</li>
+                  <li class="col px-1 trade-box-listItem text-right">0.00063</li>
+                </ul>
+                <ul class="d-flex trade-box-list mb-0">
+                  <li class="col px-1 trade-box-listItem text-danger">314,331.0</li>
+                  <li class="col px-1 trade-box-listItem text-right">302,795.8</li>
+                  <li class="col px-1 trade-box-listItem text-right">0.00063</li>
+                </ul>
+                <ul class="d-flex trade-box-list mb-0">
+                  <li class="col px-1 trade-box-listItem text-danger">314,331.0</li>
+                  <li class="col px-1 trade-box-listItem text-right">302,795.8</li>
+                  <li class="col px-1 trade-box-listItem text-right">0.00063</li>
+                </ul>
+                <ul class="d-flex trade-box-list mb-0">
+                  <li class="col px-1 trade-box-listItem text-danger">314,331.0</li>
+                  <li class="col px-1 trade-box-listItem text-right">302,795.8</li>
+                  <li class="col px-1 trade-box-listItem text-right">0.00063</li>
+                </ul>
+                <ul class="d-flex trade-box-list mb-0">
+                  <li class="col px-1 trade-box-listItem text-danger">314,331.0</li>
+                  <li class="col px-1 trade-box-listItem text-right">302,795.8</li>
+                  <li class="col px-1 trade-box-listItem text-right">0.00063</li>
+                </ul>
+                <ul class="d-flex trade-box-list mb-0">
+                  <li class="col px-1 trade-box-listItem text-danger">314,331.0</li>
+                  <li class="col px-1 trade-box-listItem text-right">302,795.8</li>
+                  <li class="col px-1 trade-box-listItem text-right">0.00063</li>
+                </ul>
+                <ul class="d-flex trade-box-list mb-0">
+                  <li class="col px-1 trade-box-listItem text-danger">314,331.0</li>
+                  <li class="col px-1 trade-box-listItem text-right">302,795.8</li>
+                  <li class="col px-1 trade-box-listItem text-right">0.00063</li>
+                </ul>
+                <ul class="d-flex trade-box-list mb-0">
+                  <li class="col px-1 trade-box-listItem text-danger">314,331.0</li>
+                  <li class="col px-1 trade-box-listItem text-right">302,795.8</li>
+                  <li class="col px-1 trade-box-listItem text-right">0.00063</li>
+                </ul>
+                <ul class="d-flex trade-box-list mb-0">
+                  <li class="col px-1 trade-box-listItem text-danger">314,331.0</li>
+                  <li class="col px-1 trade-box-listItem text-right">302,795.8</li>
+                  <li class="col px-1 trade-box-listItem text-right">0.00063</li>
+                </ul>
+                <ul class="d-flex trade-box-list mb-0">
+                  <li class="col px-1 trade-box-listItem text-danger">314,331.0</li>
+                  <li class="col px-1 trade-box-listItem text-right">302,795.8</li>
+                  <li class="col px-1 trade-box-listItem text-right">0.00063</li>
+                </ul>
+                <ul class="d-flex trade-box-list mb-0">
+                  <li class="col px-1 trade-box-listItem text-danger">314,331.0</li>
+                  <li class="col px-1 trade-box-listItem text-right">302,795.8</li>
+                  <li class="col px-1 trade-box-listItem text-right">0.00063</li>
+                </ul>
+                <ul class="d-flex trade-box-list mb-0">
+                  <li class="col px-1 trade-box-listItem text-danger">314,331.0</li>
+                  <li class="col px-1 trade-box-listItem text-right">302,795.8</li>
+                  <li class="col px-1 trade-box-listItem text-right">0.00063</li>
+                </ul>
+                <ul class="d-flex trade-box-list mb-0">
+                  <li class="col px-1 trade-box-listItem text-danger">314,331.0</li>
+                  <li class="col px-1 trade-box-listItem text-right">302,795.8</li>
+                  <li class="col px-1 trade-box-listItem text-right">0.00063</li>
+                </ul>
+                <ul class="d-flex trade-box-list mb-0">
+                  <li class="col px-1 trade-box-listItem text-danger">314,331.0</li>
+                  <li class="col px-1 trade-box-listItem text-right">302,795.8</li>
+                  <li class="col px-1 trade-box-listItem text-right">0.00063</li>
+                </ul>
+                <ul class="d-flex trade-box-list mb-0">
+                  <li class="col px-1 trade-box-listItem text-danger">314,331.0</li>
+                  <li class="col px-1 trade-box-listItem text-right">302,795.8</li>
+                  <li class="col px-1 trade-box-listItem text-right">0.00063</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 中間數值區塊-->
+        <div class="trade-current-amount">
+          <!--text-success =綠色字 ;text-danger =紅色字-->
+          <div class="count trade-number text-danger"><span>557,263</span><i class="icon-arrow"></i></div>
+        </div>
+      </div>
+    </div>
+    <!--pills-tradeColor-all (顯示綠色)-->
+    <div id="pills-tradeColor-green" role="tabpanel" aria-labelledby="pills-tradeColor-green-tab" class="tab-pane fade">
+      <div class="table-responsive table-trade position-relative">
+        <!-- 賣初(綠色)-->
+        <!-- 中間數值區塊-->
+        <div class="trade-current-amount">
+          <!--text-success =綠色字 ;text-danger =紅色字-->
+          <div class="count trade-number text-danger"><span>557,263</span><i class="icon-arrow"></i></div>
+        </div>
+        <div class="trade-box table-trade">
+          <div class="trade-box-hd">
+            <div class="col px-1">
+              <div class="font-14">價格</div>
+            </div>
+            <div class="col px-1">
+              <div class="font-14 text-right">數量</div>
+            </div>
+            <div class="col px-1">
+              <div class="font-14 text-right">總價</div>
+            </div>
+          </div>
+          <div class="trade-box-bd">
+            <div class="trade-buy-box">
+              <!-- 賣出-->
+              <div class="trade-buy d-flex flex-column">
+                <ul class="d-flex trade-box-list mb-0">
+                  <li class="col px-1 trade-box-listItem text-success">First</li>
+                  <li class="col px-1 trade-box-listItem text-right">302,795.8</li>
+                  <li class="col px-1 trade-box-listItem text-right">0.00063</li>
+                </ul>
+                <ul class="d-flex trade-box-list mb-0">
+                  <li class="col px-1 trade-box-listItem text-success">55,555</li>
+                  <li class="col px-1 trade-box-listItem text-right">302,795.8</li>
+                  <li class="col px-1 trade-box-listItem text-right">0.00063</li>
+                </ul>
+                <ul class="d-flex trade-box-list mb-0">
+                  <li class="col px-1 trade-box-listItem text-success">55,555</li>
+                  <li class="col px-1 trade-box-listItem text-right">302,795.8</li>
+                  <li class="col px-1 trade-box-listItem text-right">0.00063</li>
+                </ul>
+                <ul class="d-flex trade-box-list mb-0">
+                  <li class="col px-1 trade-box-listItem text-success">55,555</li>
+                  <li class="col px-1 trade-box-listItem text-right">302,795.8</li>
+                  <li class="col px-1 trade-box-listItem text-right">0.00063</li>
+                </ul>
+                <ul class="d-flex trade-box-list mb-0">
+                  <li class="col px-1 trade-box-listItem text-success">55,555</li>
+                  <li class="col px-1 trade-box-listItem text-right">302,795.8</li>
+                  <li class="col px-1 trade-box-listItem text-right">0.00063</li>
+                </ul>
+                <ul class="d-flex trade-box-list mb-0">
+                  <li class="col px-1 trade-box-listItem text-success">55,555</li>
+                  <li class="col px-1 trade-box-listItem text-right">302,795.8</li>
+                  <li class="col px-1 trade-box-listItem text-right">0.00063</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
