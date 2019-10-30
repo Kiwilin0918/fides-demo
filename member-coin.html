@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+  <head>
+    <title>Fidex</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="stylesheets/all.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <!--menu-->
+    
+    <script src="javascripts/vendor.js"></script>
+    <script src="assets/js/echarts.min.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark font-14 fixed-top"><a href="index.html"><img src="images/logo.svg" style="width:160px;" alt="" class="img-fluid"></a>
+      <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler border-0"><span class="navbar-toggler-icon"></span></button>
+      <div id="navbarSupportedContent" class="collapse navbar-collapse">
+        <!--已登入時顯示-->
+        <ul class="navbar-nav ml-auto">
+          <li class="px-md-2"><a style="border-radius: 50rem;" href="member-coin.html" class="btn btn-primary px-4 font-14 text-light"> <i class="far fa-gem mr-1"></i>主钱包</a></li>
+          <li class="px-md-2"><a href="login.html" class="nav-link text-light">登出</a></li>
+        </ul>
+      </div>
+    </nav>
+    <section class="container-fluid wrapper">
+      <!-- 币种选择-->
+      <section class="mb-3">
+        <div class="d-flex align-items-center">
+          <div class="mr-auto d-flex">
+            <div class="dropdown mr-3">
+              <button id="dropdownCoinButton" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-outline-secondary dropdown-toggle">BTC</button>
+              <div aria-labelledby="dropdownCoinButton" class="dropdown-menu dropdown-menu-right"><a href="#" class="dropdown-item">ETH</a><a href="#" class="dropdown-item">USDT</a></div>
+            </div>
+            <div class="d-flex align-items-center">
+              <!-- 根据--><img src="images/coin/Cjdowner-Cryptocurrency-Flat-Bitcoin-BTC.svg" alt="" class="icon"><span class="ml-2 font-weight-bold h5 mb-0">比特币 (BTC)</span>
+            </div>
+          </div>
+          <button type="button" class="btn btn-outline-primary border-0"><i class="fas fa-redo-alt fa-lg"></i></button>
+        </div>
+      </section>
+      <!-- 虚拟币内容-->
+      <section>
+        <!-- info-->
+        <div class="form-row">
+          <div class="col-lg-4 mb-3">
+            <div class="card">
+              <div class="card-body"><span class="mr-1">拥有:</span><span class="text-primary">0.000000000</span>
+                <div class="d-flex justify-content-between">
+                  <p>≈ 预计 0.00 美金</p>
+                  <div class="text-success"><span class="font-weight-light">+2.87%</span><i class="ml-1 fas fa-sort-up"></i></div>
+                </div>
+                <div class="form-row">
+                  <div class="col-6">
+                    <!-- Button trigger modal-->
+                    <button type="button" data-toggle="modal" data-target="#modal_address" class="btn btn-block btn-primary"><i class="fas fa-qrcode mr-1"></i>钱包地址</button>
+                    <!-- Modal-->
+                    <div id="modal_address" tabindex="-1" role="dialog" aria-labelledby="modal_addressLabel" aria-hidden="true" class="modal fade">
+                      <div role="document" class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 id="modal_addressLabel" class="modal-title mb-0">
+                              <div class="d-flex align-items-center"><img src="images/coin/Cjdowner-Cryptocurrency-Flat-Bitcoin-BTC.svg" alt="" class="icon"><span class="ml-2 font-weight-bold h5 mb-0">比特币地址</span></div>
+                            </h5>
+                            <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+                          </div>
+                          <div class="modal-body text-center">
+                            <h5>我的比特币存款钱包</h5><img src="https://fakeimg.pl/150x150/" alt="" class="img-fluid my-3">
+                            <p id="address" class="text-primary border rounded border-muted py-2">3LXDfPWy4nWWioX9ysjz1MxUCmfXGKz3Li</p>
+                            <button id="btn2" type="button" data-clipboard-target="#address" class="btn btn-outline-primary px-4">拷贝</button>
+                          </div>
+                          <div class="modal-footer justify-content-center">
+                            <button type="button" data-dismiss="modal" class="btn btn-danger">返回</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6"><a role="button" href="dispensing.html" class="btn btn-block btn-success">出款</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-8 mb-3">
+            <div class="card h-100">
+              <div class="card-body">
+                <div class="row h-100 align-items-center">
+                  <div class="col-lg-3 mb-2 mb-lg-0">
+                    <p class="mb-0 text-secondary">价格</p>
+                    <p class="mb-0 font-weight-bold">$12345.510000</p>
+                  </div>
+                  <div class="col-lg-3 mb-2 mb-lg-0">
+                    <p class="mb-0 text-secondary">可用供应</p>
+                    <p class="mb-0 font-weight-bold">12345.510000</p>
+                  </div>
+                  <div class="col-lg-3 mb-2 mb-lg-0">
+                    <p class="mb-0 text-secondary">发行总量</p>
+                    <p class="mb-0 font-weight-bold">$12345.510000</p>
+                  </div>
+                  <div class="col-lg-3 mb-2 mb-lg-0">
+                    <p class="mb-0 text-secondary">最大供应</p>
+                    <p class="mb-0 font-weight-bold">$12345.510000</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- history-->
+        <div class="form-row">
+          <!-- 接收记录-->
+          <div class="col-lg-6 mb-3">
+            <div class="card">
+              <div class="card-header text-center bg-primary">
+                <h5 class="card-title text-white">最新接收记录</h5>
+              </div>
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table class="font-14 table table-hover reset-table">
+                    <thead>
+                      <tr class="text-dark">
+                        <th scope="col" style="min-width:170px" nowrap="nowrap">时间</th>
+                        <th scope="col" nowrap="nowrap">数量</th>
+                        <th scope="col" nowrap="nowrap">Nick name</th>
+                        <th scope="col" nowrap="nowrap">发送金额</th>
+                        <th scope="col" nowrap="nowrap">收到金额</th>
+                        <th scope="col" nowrap="nowrap">手续费</th>
+                        <th scope="col" nowrap="nowrap">状态</th>
+                        <th scope="col" nowrap="nowrap" style="max-width:150px;">发送地址</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <!-- example1-->
+                      <tr>
+                        <td>2019-08-30 20:31:15</td>
+                        <td>1234.56781234</td>
+                        <td>admin0123456</td>
+                        <td>1234.56781234</td>
+                        <td>1234.56781234</td>
+                        <td>0.000100</td>
+                        <td>
+                          <!-- 状态加入class说明： .btn-success=通过, .btn-warning=处理中, .btn-danger= 失败-->
+                          <button type="button" class="btn btn-sm btn-success">通过</button>
+                        </td>
+                        <td style="max-width:150px;" class="text-truncate">AE1048050924039019304888020CE</td>
+                      </tr>
+                      <!-- example2-->
+                      <tr>
+                        <td>2019-08-30 20:31:15</td>
+                        <td>1234.56781234</td>
+                        <td>admin0123456</td>
+                        <td>1234.56781234</td>
+                        <td>1234.56781234</td>
+                        <td>0.000100</td>
+                        <td>
+                          <!-- 状态加入class说明： .btn-success=通过, .btn-warning=处理中, .btn-danger= 失败-->
+                          <button type="button" class="btn btn-sm btn-warning">处理中</button>
+                        </td>
+                        <td style="max-width:150px;" class="text-truncate">AE1048050924039019304888020CE</td>
+                      </tr>
+                      <!-- example3-->
+                      <tr>
+                        <td>2019-08-30 20:31:15</td>
+                        <td>1234.56781234</td>
+                        <td>admin0123456</td>
+                        <td>1234.56781234</td>
+                        <td>1234.56781234</td>
+                        <td>0.000100</td>
+                        <td>
+                          <!-- 状态加入class说明： .btn-success=通过, .btn-warning=处理中, .btn-danger= 失败-->
+                          <button type="button" class="btn btn-sm btn-danger">失败</button>
+                        </td>
+                        <td style="max-width:150px;" class="text-truncate">AE1048050924039019304888020CE</td>
+                      </tr>
+                      <!-- example4-->
+                      <tr>
+                        <td>2019-08-30 20:31:15</td>
+                        <td>1234.56781234</td>
+                        <td>admin0123456</td>
+                        <td>1234.56781234</td>
+                        <td>1234.56781234</td>
+                        <td>0.000100</td>
+                        <td>
+                          <!-- 状态加入class说明： .btn-success=通过, .btn-warning=处理中, .btn-danger= 失败-->
+                          <button type="button" class="btn btn-sm btn-success">通过</button>
+                        </td>
+                        <td style="max-width:150px;" class="text-truncate">AE1048050924039019304888020CE</td>
+                      </tr>
+                      <!-- example5-->
+                      <tr>
+                        <td>2019-08-30 20:31:15</td>
+                        <td>1234.56781234</td>
+                        <td>admin0123456</td>
+                        <td>1234.56781234</td>
+                        <td>1234.56781234</td>
+                        <td>0.000100</td>
+                        <td>
+                          <!-- 状态加入class说明： .btn-success=通过, .btn-warning=处理中, .btn-danger= 失败-->
+                          <button type="button" class="btn btn-sm btn-success">通过</button>
+                        </td>
+                        <td style="max-width:150px;" class="text-truncate">AE1048050924039019304888020CE</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <nav aria-label="Page navigation example" class="mt-3 d-flex justify-content-center">
+                  <ul class="pagination">
+                    <li class="page-item"><a href="#" class="page-link">上一页</a></li>
+                    <li class="page-item"><a href="#" class="page-link">1</a></li>
+                    <li class="page-item"><a href="#" class="page-link">2</a></li>
+                    <li class="page-item"><a href="#" class="page-link">3</a></li>
+                    <li class="page-item"><a href="#" class="page-link">下一页</a></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+          <!-- 发送记录-->
+          <div class="col-lg-6 mb-3">
+            <div class="card">
+              <div class="card-header text-center bg-success">
+                <h5 class="card-title text-white">最新发送记录</h5>
+              </div>
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table class="font-14 table table-hover reset-table">
+                    <thead>
+                      <tr class="text-dark">
+                        <th scope="col" style="min-width:170px" nowrap="nowrap">时间</th>
+                        <th scope="col" nowrap="nowrap">数量</th>
+                        <th scope="col" nowrap="nowrap">Nick name</th>
+                        <th scope="col" nowrap="nowrap">发送金额</th>
+                        <th scope="col" nowrap="nowrap">收到金额</th>
+                        <th scope="col" nowrap="nowrap">手续费</th>
+                        <th scope="col" nowrap="nowrap">状态</th>
+                        <th scope="col" nowrap="nowrap" style="max-width:150px;">发送地址</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <!-- example1-->
+                      <tr>
+                        <td>2019-08-30 20:31:15</td>
+                        <td>1234.56781234</td>
+                        <td>admin0123456</td>
+                        <td>1234.56781234</td>
+                        <td>1234.56781234</td>
+                        <td>0.000100</td>
+                        <td>
+                          <!-- 状态加入class说明： .btn-success=通过, .btn-warning=处理中, .btn-danger= 失败-->
+                          <button type="button" class="btn btn-sm btn-success">通过</button>
+                        </td>
+                        <td style="max-width:150px;" class="text-truncate">AE1048050924039019304888020CE</td>
+                      </tr>
+                      <!-- example2-->
+                      <tr>
+                        <td>2019-08-30 20:31:15</td>
+                        <td>1234.56781234</td>
+                        <td>admin0123456</td>
+                        <td>1234.56781234</td>
+                        <td>1234.56781234</td>
+                        <td>0.000100</td>
+                        <td>
+                          <!-- 状态加入class说明： .btn-success=通过, .btn-warning=处理中, .btn-danger= 失败-->
+                          <button type="button" class="btn btn-sm btn-warning">处理中</button>
+                        </td>
+                        <td style="max-width:150px;" class="text-truncate">AE1048050924039019304888020CE</td>
+                      </tr>
+                      <!-- example3-->
+                      <tr>
+                        <td>2019-08-30 20:31:15</td>
+                        <td>1234.56781234</td>
+                        <td>admin0123456</td>
+                        <td>1234.56781234</td>
+                        <td>1234.56781234</td>
+                        <td>0.000100</td>
+                        <td>
+                          <!-- 状态加入class说明： .btn-success=通过, .btn-warning=处理中, .btn-danger= 失败-->
+                          <button type="button" class="btn btn-sm btn-danger">失败</button>
+                        </td>
+                        <td style="max-width:150px;" class="text-truncate">AE1048050924039019304888020CE</td>
+                      </tr>
+                      <!-- example4-->
+                      <tr>
+                        <td>2019-08-30 20:31:15</td>
+                        <td>1234.56781234</td>
+                        <td>admin0123456</td>
+                        <td>1234.56781234</td>
+                        <td>1234.56781234</td>
+                        <td>0.000100</td>
+                        <td>
+                          <!-- 状态加入class说明： .btn-success=通过, .btn-warning=处理中, .btn-danger= 失败-->
+                          <button type="button" class="btn btn-sm btn-success">通过</button>
+                        </td>
+                        <td style="max-width:150px;" class="text-truncate">AE1048050924039019304888020CE</td>
+                      </tr>
+                      <!-- example5-->
+                      <tr>
+                        <td>2019-08-30 20:31:15</td>
+                        <td>1234.56781234</td>
+                        <td>admin0123456</td>
+                        <td>1234.56781234</td>
+                        <td>1234.56781234</td>
+                        <td>0.000100</td>
+                        <td>
+                          <!-- 状态加入class说明： .btn-success=通过, .btn-warning=处理中, .btn-danger= 失败-->
+                          <button type="button" class="btn btn-sm btn-success">通过</button>
+                        </td>
+                        <td style="max-width:150px;" class="text-truncate">AE1048050924039019304888020CE</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <nav aria-label="Page navigation example" class="mt-3 d-flex justify-content-center">
+                  <ul class="pagination">
+                    <li class="page-item"><a href="#" class="page-link">上一页</a></li>
+                    <li class="page-item"><a href="#" class="page-link">1</a></li>
+                    <li class="page-item"><a href="#" class="page-link">2</a></li>
+                    <li class="page-item"><a href="#" class="page-link">3</a></li>
+                    <li class="page-item"><a href="#" class="page-link">下一页</a></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+    </section>
+    <footer class="fixed-bottom w-100 bg-dark">
+      <div class="form-row justify-content-between">
+        <div class="col"><a href="member-coin.html" class="btn-footer text-center"> 
+            <div class="py-1"><i class="far fa-gem"></i>
+              <div class="font-14">主钱包</div>
+            </div></a></div>
+        <div class="col"><a href="index.html" class="btn-footer text-center"> 
+            <div class="py-1"><i class="fas fa-home"></i>
+              <div class="font-14">首页</div>
+            </div></a></div>
+        <div class="col"><a href="accounting.html" class="btn-footer text-center"> 
+            <div class="py-1"><i class="fas fa-history"></i>
+              <div class="font-14">出入帐查询</div>
+            </div></a></div>
+      </div>
+    </footer>
+    
+    <script src="assets/js/clipboard.min.js"></script>
+    <script src="assets/js/clipboard-trigger.js"></script>
+  </body>
+</html>

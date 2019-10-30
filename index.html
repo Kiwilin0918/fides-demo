@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-tw">
   <head>
-    <title>Demo</title>
+    <title>Fidex</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone=no">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
@@ -14,188 +14,131 @@
     <script src="assets/js/echarts.min.js"></script>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark font-14"><a href="index.html"><img src="https://fakeimg.pl/140x45/" alt="" class="img-fluid"></a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark font-14 fixed-top"><a href="index.html"><img src="images/logo.svg" style="width:160px;" alt="" class="img-fluid"></a>
       <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler border-0"><span class="navbar-toggler-icon"></span></button>
       <div id="navbarSupportedContent" class="collapse navbar-collapse">
         <!--已登入時顯示-->
         <ul class="navbar-nav ml-auto">
-          <li class="px-md-2"><a href="index.html" class="nav-link text-light">钱包</a></li>
+          <li class="px-md-2"><a style="border-radius: 50rem;" href="member-coin.html" class="btn btn-primary px-4 font-14 text-light"> <i class="far fa-gem mr-1"></i>主钱包</a></li>
           <li class="px-md-2"><a href="login.html" class="nav-link text-light">登出</a></li>
-          <li class="px-md-2 dropdown"><a id="navbarDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle text-light">简体中文</a>
-            <div aria-labelledby="navbarDropdown" class="dropdown-menu dropdown-menu-right"><a href="#" class="dropdown-item">English</a></div>
-          </li>
         </ul>
       </div>
     </nav>
-    <section class="container wrapper py-lg-5 py-3">
-      <!-- banner-->
-      <section class="bg-dark">
-      </section>
-      <!-- 币种选择-->
-      <section class="mb-3">
-        <div class="d-flex align-items-center">
-          <div class="mr-auto d-flex">
-            <div class="dropdown mr-3">
-              <button id="dropdownCoinButton" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-outline-secondary dropdown-toggle">BTC</button>
-              <div aria-labelledby="dropdownCoinButton" class="dropdown-menu dropdown-menu-right"><a href="#" class="dropdown-item">ETH</a><a href="#" class="dropdown-item">USDT</a></div>
-            </div>
-            <div class="d-flex align-items-center"><img src="images/coin/Cjdowner-Cryptocurrency-Flat-Bitcoin-BTC.svg" alt="" class="icon"><span class="ml-2 font-weight-bold h5 mb-0">比特币 (BTC)</span></div>
-          </div>
-          <button type="button" class="btn btn-outline-primary border-0"><i class="fas fa-redo-alt fa-lg"></i></button>
-        </div>
-      </section>
-      <!-- 虚拟币内容-->
-      <section>
-        <!-- info-->
+    <section class="wrapper">
+      <div class="container-fluid">
         <div class="form-row">
-          <div class="col-lg-4 mb-3">
-            <div class="card">
-              <div class="card-body"><span class="mr-1">拥有:</span><span class="text-primary">0.000000000</span>
-                <div class="d-flex justify-content-between">
-                  <p>≈ 预计 0.00 美金</p>
-                  <div class="text-success"><span class="font-weight-light">+2.87%</span><i class="ml-1 fas fa-sort-up"></i></div>
-                </div>
-                <div class="form-row">
-                  <div class="col-6">
-                    <!-- Button trigger modal-->
-                    <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-block btn-primary"><i class="fas fa-qrcode mr-1"></i>钱包地址</button>
-                    <!-- Modal-->
-                    <div id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade">
-                      <div role="document" class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 id="exampleModalLabel" class="modal-title mb-0">
-                              <div class="d-flex align-items-center"><img src="images/coin/Cjdowner-Cryptocurrency-Flat-Bitcoin-BTC.svg" alt="" class="icon"><span class="ml-2 font-weight-bold h5 mb-0">比特币地址</span></div>
-                            </h5>
-                            <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
-                          </div>
-                          <div class="modal-body text-center">
-                            <h5>我的比特币存款钱包</h5><img src="https://fakeimg.pl/150x150/" alt="" class="img-fluid my-3">
-                            <p class="text-primary border rounded border-muted py-2">3LXDfPWy4nWWioX9ysjz1MxUCmfXGKz3Li</p>
-                            <button type="button" class="btn btn-outline-primary px-4">拷贝</button>
-                          </div>
-                          <div class="modal-footer justify-content-center">
-                            <button type="button" data-dismiss="modal" class="btn btn-danger">返回</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-6"><a role="button" href="dispensing.html" class="btn btn-block btn-success">出款</a></div>
-                </div>
+          <div class="col-md-6 col-xl-3 mb-3">
+            <div class="card cd-shadow h-100 border-top-primary">
+              <div class="card-body px-2 text-center">
+                <p class="mb-0 text-secondary">总馀额</p>
+                <h4 class="coin-pos mb-0">57578032.81025789
+                  <div class="unit">≈美金</div>
+                </h4>
               </div>
+              <ul class="list-group list-group-flush">
+                <!-- 点击列表进入该币页面-->
+                <li class="list-group-item coin-block d-flex justify-content-between align-items-center px-2">
+                  <div class="coin-title"><img src="images/coin/Cjdowner-Cryptocurrency-Flat-Bitcoin-BTC.svg" alt="" class="icon"><span class="ml-2">BTC</span></div>
+                  <div class="coin-num text-right">80808080.12345678<small class="text-secondary d-block">≈ 预计 0.00 美金</small></div>
+                </li>
+                <li class="list-group-item coin-block d-flex justify-content-between align-items-center px-2">
+                  <div class="coin-title"><img src="images/coin/Cjdowner-Cryptocurrency-Flat-Ethereum-ETH.svg" alt="" class="icon"><span class="ml-2">ETH</span></div>
+                  <div class="coin-num text-right">80808080.12345678<small class="text-secondary d-block">≈ 预计 0.00 美金</small></div>
+                </li>
+                <li class="list-group-item coin-block d-flex justify-content-between align-items-center px-2">
+                  <div class="coin-title"><img src="images/coin/Cjdowner-Cryptocurrency-Flat-Tether-USDT.svg" alt="" class="icon"><span class="ml-2">USDT</span></div>
+                  <div class="coin-num text-right">80808080.12345678<small class="text-secondary d-block">≈ 预计 0.00 美金</small></div>
+                </li>
+              </ul>
             </div>
           </div>
-          <div class="col-lg-8 mb-3">
-            <div class="card h-100">
-              <div class="card-body">
-                <div class="row h-100 align-items-center">
-                  <div class="col-lg-3 mb-2 mb-lg-0">
-                    <p class="mb-0 text-secondary">价格</p>
-                    <p class="mb-0 font-weight-bold">$12345.510000</p>
-                  </div>
-                  <div class="col-lg-3 mb-2 mb-lg-0">
-                    <p class="mb-0 text-secondary">可用供应</p>
-                    <p class="mb-0 font-weight-bold">12345.510000</p>
-                  </div>
-                  <div class="col-lg-3 mb-2 mb-lg-0">
-                    <p class="mb-0 text-secondary">发行总量</p>
-                    <p class="mb-0 font-weight-bold">$12345.510000</p>
-                  </div>
-                  <div class="col-lg-3 mb-2 mb-lg-0">
-                    <p class="mb-0 text-secondary">最大供应</p>
-                    <p class="mb-0 font-weight-bold">$12345.510000</p>
-                  </div>
-                </div>
+          <div class="col-md-6 col-xl-3 mb-3">
+            <div class="card cd-shadow h-100 border-top-warning">
+              <div class="card-body px-2 text-center">
+                <p class="mb-0 text-secondary">今日馀额</p>
+                <h4 class="mb-0">135.2001</h4>
               </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item coin-block d-flex justify-content-between align-items-center px-2">
+                  <div class="coin-title"><img src="images/coin/Cjdowner-Cryptocurrency-Flat-Bitcoin-BTC.svg" alt="" class="icon"><span class="ml-2">BTC</span></div>
+                  <div class="coin-num text-right">80808080.12345678<small class="text-secondary d-block">≈ 预计 0.00 美金</small></div>
+                </li>
+                <li class="list-group-item coin-block d-flex justify-content-between align-items-center px-2">
+                  <div class="coin-title"><img src="images/coin/Cjdowner-Cryptocurrency-Flat-Ethereum-ETH.svg" alt="" class="icon"><span class="ml-2">ETH</span></div>
+                  <div class="coin-num text-right">80808080.12345678<small class="text-secondary d-block">≈ 预计 0.00 美金</small></div>
+                </li>
+                <li class="list-group-item coin-block d-flex justify-content-between align-items-center px-2">
+                  <div class="coin-title"><img src="images/coin/Cjdowner-Cryptocurrency-Flat-Tether-USDT.svg" alt="" class="icon"><span class="ml-2">USDT</span></div>
+                  <div class="coin-num text-right">80808080.12345678<small class="text-secondary d-block">≈ 预计 0.00 美金</small></div>
+                </li>
+              </ul>
             </div>
           </div>
-        </div>
-        <!-- history-->
-        <div class="form-row">
-          <!-- 接收记录-->
-          <div class="col-lg-6 mb-3">
-            <div class="card">
-              <div class="card-header text-center bg-primary">
-                <h5 class="card-title text-white">最新接收记录</h5>
+          <div class="col-md-6 col-xl-3 mb-3">
+            <div class="card cd-shadow h-100 border-top-pink">
+              <div class="card-body px-2 text-center">
+                <p class="mb-0 text-secondary">今日入币</p>
+                <h4 class="mb-0">0</h4>
               </div>
-              <div class="card-body table-responsive">
-                <table class="table table-hover">
-                  <thead>
-                    <tr class="text-dark">
-                      <th scope="col" nowrap="nowrap">币种</th>
-                      <th scope="col" nowrap="nowrap" class="text-right">接收价</th>
-                      <th scope="col" nowrap="nowrap" class="text-right">title3</th>
-                      <th scope="col" nowrap="nowrap" class="text-right">title4</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="d-flex align-items-center"><img src="images/coin/Cjdowner-Cryptocurrency-Flat-Bitcoin-BTC.svg" alt="" class="icon mr-2">
-                        <div class="text-dark"><span class="mb-0">BTC</span></div>
-                      </td>
-                      <td class="text-right">249,798,8</td>
-                      <td class="text-right">135,000</td>
-                      <td class="text-right">9,000</td>
-                    </tr>
-                    <tr>
-                      <td class="d-flex align-items-center"><img src="images/coin/Cjdowner-Cryptocurrency-Flat-Ethereum-ETH.svg" alt="" class="icon mr-2">
-                        <div class="text-dark"><span class="mb-0">ETH</span></div>
-                      </td>
-                      <td class="text-right">249,798,8</td>
-                      <td class="text-right">135,000</td>
-                      <td class="text-right">9,000</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item coin-block d-flex justify-content-between align-items-center px-2">
+                  <div class="coin-title"><img src="images/coin/Cjdowner-Cryptocurrency-Flat-Bitcoin-BTC.svg" alt="" class="icon"><span class="ml-2">BTC</span></div>
+                  <div class="coin-num text-right">80808080.12345678<small class="text-secondary d-block">≈ 预计 0.00 美金</small></div>
+                </li>
+                <li class="list-group-item coin-block d-flex justify-content-between align-items-center px-2">
+                  <div class="coin-title"><img src="images/coin/Cjdowner-Cryptocurrency-Flat-Ethereum-ETH.svg" alt="" class="icon"><span class="ml-2">ETH</span></div>
+                  <div class="coin-num text-right">80808080.12345678<small class="text-secondary d-block">≈ 预计 0.00 美金</small></div>
+                </li>
+                <li class="list-group-item coin-block d-flex justify-content-between align-items-center px-2">
+                  <div class="coin-title"><img src="images/coin/Cjdowner-Cryptocurrency-Flat-Tether-USDT.svg" alt="" class="icon"><span class="ml-2">USDT</span></div>
+                  <div class="coin-num text-right">80808080.12345678<small class="text-secondary d-block">≈ 预计 0.00 美金</small></div>
+                </li>
+              </ul>
             </div>
           </div>
-          <!-- 发送记录-->
-          <div class="col-lg-6 mb-3">
-            <div class="card">
-              <div class="card-header text-center bg-success">
-                <h5 class="card-title text-white">最新发送记录</h5>
+          <div class="col-md-6 col-xl-3 mb-3">
+            <div class="card cd-shadow h-100 border-top-indigo">
+              <div class="card-body px-2 text-center">
+                <p class="mb-0 text-secondary">今日出币</p>
+                <h4 class="mb-0">578</h4>
               </div>
-              <div class="card-body table-responsive">
-                <table class="table table-hover">
-                  <thead>
-                    <tr class="text-dark">
-                      <th scope="col" nowrap="nowrap">币种</th>
-                      <th scope="col" nowrap="nowrap" class="text-right">接收价</th>
-                      <th scope="col" nowrap="nowrap" class="text-right">title3</th>
-                      <th scope="col" nowrap="nowrap" class="text-right">title4</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="d-flex align-items-center"><img src="images/coin/Cjdowner-Cryptocurrency-Flat-Bitcoin-BTC.svg" alt="" class="icon mr-2">
-                        <div class="text-dark"><span class="mb-0">BTC</span></div>
-                      </td>
-                      <td class="text-right">249,798,8</td>
-                      <td class="text-right">135,000</td>
-                      <td class="text-right">9,000</td>
-                    </tr>
-                    <tr>
-                      <td class="d-flex align-items-center"><img src="images/coin/Cjdowner-Cryptocurrency-Flat-Ethereum-ETH.svg" alt="" class="icon mr-2">
-                        <div class="text-dark"><span class="mb-0">ETH</span></div>
-                      </td>
-                      <td class="text-right">249,798,8</td>
-                      <td class="text-right">135,000</td>
-                      <td class="text-right">9,000</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item coin-block d-flex justify-content-between align-items-center px-2">
+                  <div class="coin-title"><img src="images/coin/Cjdowner-Cryptocurrency-Flat-Bitcoin-BTC.svg" alt="" class="icon"><span class="ml-2">BTC</span></div>
+                  <div class="coin-num text-right">80808080.12345678<small class="text-secondary d-block">≈ 预计 0.00 美金</small></div>
+                </li>
+                <li class="list-group-item coin-block d-flex justify-content-between align-items-center px-2">
+                  <div class="coin-title"><img src="images/coin/Cjdowner-Cryptocurrency-Flat-Ethereum-ETH.svg" alt="" class="icon"><span class="ml-2">ETH</span></div>
+                  <div class="coin-num text-right">80808080.12345678<small class="text-secondary d-block">≈ 预计 0.00 美金</small></div>
+                </li>
+                <li class="list-group-item coin-block d-flex justify-content-between align-items-center px-2">
+                  <div class="coin-title"><img src="images/coin/Cjdowner-Cryptocurrency-Flat-Tether-USDT.svg" alt="" class="icon"><span class="ml-2">USDT</span></div>
+                  <div class="coin-num text-right">80808080.12345678<small class="text-secondary d-block">≈ 预计 0.00 美金</small></div>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
-      </section>
-      
+      </div>
     </section>
-    <footer class="bg-dark">
-      <p class="mb-0 text-center border-top py-2 text-white">Copyright © Demo</p>
+    <footer class="fixed-bottom w-100 bg-dark">
+      <div class="form-row justify-content-between">
+        <div class="col"><a href="member-coin.html" class="btn-footer text-center"> 
+            <div class="py-1"><i class="far fa-gem"></i>
+              <div class="font-14">主钱包</div>
+            </div></a></div>
+        <div class="col"><a href="index.html" class="btn-footer text-center"> 
+            <div class="py-1"><i class="fas fa-home"></i>
+              <div class="font-14">首页</div>
+            </div></a></div>
+        <div class="col"><a href="accounting.html" class="btn-footer text-center"> 
+            <div class="py-1"><i class="fas fa-history"></i>
+              <div class="font-14">出入帐查询</div>
+            </div></a></div>
+      </div>
     </footer>
-    <script src="assets/js/demo.js"></script>
+    
+    <script src="assets/js/clipboard.min.js"></script>
+    <script src="assets/js/clipboard-trigger.js"></script>
   </body>
 </html>
